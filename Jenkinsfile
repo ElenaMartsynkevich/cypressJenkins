@@ -4,7 +4,7 @@ tools {nodejs "NodeJS20"}
 
 stages {
     stage('cypress parallel tests') {
-       //parallel {
+       parallel {
             stage('tester A') {
                 steps {
                   sh "echo 'abc'"
@@ -12,7 +12,7 @@ stages {
                     //sh "npm run cy:run"
                 }
             }
-        //}
+       }
     }
 }
 }
