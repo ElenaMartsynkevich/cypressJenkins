@@ -8,7 +8,7 @@ stages {
             stage('tester A') {
                 steps {
                   //sh "apt-get -y install libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb"
-                  bat "npm run cy:run"
+                  bat 'npx cypress run --spec "cypress/e2e/firstTest.spec.js"'
                 }
             }
        }
